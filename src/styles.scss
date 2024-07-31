@@ -6,6 +6,7 @@
     --light-color: #ffffff;
     --primary-color: #AE7AFF;
     --grey-color: #5F646D;
+    --dark-hover-color: #161616;
 }
 
 *,
@@ -21,6 +22,7 @@ body{
     background-color: var(--dark-color);
     color: var(--light-color);
     background-image: url('/asserts/images/background.jpg');
+    background-size: cover;
 }
 
 .skill-tag{

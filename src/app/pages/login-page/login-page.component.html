@@ -10,17 +10,38 @@
       placeholder="Введите логин"
     />
   </label>
+
   <label class="tt-control-label mb32">
-    Пароль
-    <input
-      formControlName="password"
-      class="tt-input"
-      type="text"
-      placeholder="Введите пароль"
-    />
+    <div class="password-input">
+      Пароль
+      <input
+        formControlName="password"
+        class="tt-input"
+        [type]="isPasswordVisible() ? 'text' : 'password'"
+        placeholder="Введите пароль"
+      />
+      <button
+        class="password-eye-btn"
+        [class.active]="isPasswordVisible()"
+        (click)="isPasswordVisible.set(!isPasswordVisible())"
+      >
+        <img
+          [src]="
+            isPasswordVisible()
+              ? '/asserts/svg/openedEye.svg'
+              : '/asserts/svg/closedEye.svg'
+          "
+          alt="icon: eye"
+          width="19px"
+          height="17px"
+        />
+      </button>
+    </div>
   </label>
+
+  <!-- password-input -->
 
   <button class="btn btn-shadow" type="submit">Войти</button>
 </form>
 
-<img src="/asserts/svg/logo.svg" alt="logo" />
+<img src="/asserts/svg/logo.svg" class="m0a" alt="logo" />

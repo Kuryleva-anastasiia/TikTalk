@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SvgIconComponent } from '../svg-icon/svg-icon.component';
 
 @Component({
   selector: 'app-sidebar',
