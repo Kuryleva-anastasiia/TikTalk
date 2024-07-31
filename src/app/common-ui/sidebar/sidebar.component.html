@@ -6,11 +6,24 @@
 
 <nav>
   <ul class="main-menu-list">
+    @for (item of menuItems; track item){
     <li>
       <button class="menu-item">
-        <svg icon="home" class="menu-item__svg"></svg>
-        <span>Моя страница</span>
+        <svg [icon]="item.icon" class="menu-item__svg"></svg>
+        <span>{{ item.label }}</span>
       </button>
     </li>
+    }
   </ul>
 </nav>
+
+<p class="medium-text mb20">Подписчики</p>
+
+<app-subscriber-card></app-subscriber-card>
+
+<div class="mt20 to-subscribers">
+  <a [routerLink]="['/subscribers']" class="to-subscribers-link medium-text"
+    >Все подписчики</a
+  >
+  <svg [icon]="arrow" class="to-subscribers-icon"></svg>
+</div>
