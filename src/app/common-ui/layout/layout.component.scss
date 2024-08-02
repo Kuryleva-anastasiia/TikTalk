@@ -1,4 +1,14 @@
 :host {
     display: grid;
     grid-template-columns: 300px 1fr;
+    height: 100dvh;
+}
+
+.workspace{
+    background: var(--dark-color);
+    color: var(--light-color);
+    background-image: url('/asserts/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 24px;
 }

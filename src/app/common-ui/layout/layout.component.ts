@@ -14,11 +14,5 @@ import { ProfileService } from '../../data/services/profile.service';
     ]
 })
 export class LayoutComponent {
-    profileService = inject(ProfileService)
-
-    ngOnInit() {
-        this.profileService.getMe().subscribe(val => {
-            console.log(val)
-        })
-    }
+    
 }
