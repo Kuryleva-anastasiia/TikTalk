@@ -8,10 +8,12 @@ import { toObservable } from '@angular/core/rxjs-interop';
 import { AsyncPipe } from '@angular/common';
 import { SubscriberCardComponent } from "../../common-ui/sidebar/subscriber-card/subscriber-card.component";
 import { ImgUrlPipe } from "../../helpers/pipes/img-url.pipe";
+import { PostFeedComponent } from "./post-feed/post-feed.component";
+import { AvatarUploadComponent } from "../settings-page/avatar-upload/avatar-upload.component";
 @Component({
   selector: 'app-profile-page',
   standalone: true,
-  imports: [ProfileHeaderComponent, AsyncPipe, RouterLink, SubscriberCardComponent, ImgUrlPipe],
+  imports: [ProfileHeaderComponent, AsyncPipe, RouterLink, SubscriberCardComponent, ImgUrlPipe, PostFeedComponent, AvatarUploadComponent],
   templateUrl: './profile-page.component.html',
   styleUrl: './profile-page.component.scss'
 })

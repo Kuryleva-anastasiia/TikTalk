@@ -10,7 +10,7 @@
   </a>
 </header>
 <main class="profile-page__body">
-  <div></div>
+  <app-post-feed></app-post-feed>
   <div class="profile-page__subscribers">
     <h3 class="h6 mb16">Подписчики</h3>
     <div class="subscribers-wrapper mb32">
@@ -27,7 +27,7 @@
 
     <h3 class="h6 mb16">Навыки</h3>
     <div class="stack-wrapper mb32">
-      @for (skill of ['profile','stack']; track skill){
+      @for (skill of profile.stack; track skill){
       <div class="skill-tag">{{ skill }}</div>
       }
     </div>
